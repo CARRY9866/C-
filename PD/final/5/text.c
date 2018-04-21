@@ -1,4 +1,4 @@
-#include<stdio.h>
+	#include<stdio.h>
 #include<string.h>
 #define lim 1000 
 int getword(char *x,int max)
