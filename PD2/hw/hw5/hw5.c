@@ -148,22 +148,28 @@ int main(){
 				delete(bst,key);
 			}
 			else if(strcmp(com,"query")==0)
-			{
+			{	
+				printf("----------\n");
 				getword(key,Maxkey);
 				if((tmp = search(bst,key)))
 				printf("%s\t%d\n",tmp->key,tmp->cnt);
+				printf("----------\n");
 			}
 			else if(strcmp(com,"inorder")==0)
-			{
+			{	
+				printf("----------\n");
 				inorder(bst);
+				printf("----------\n");
 			}
 			else if(strcmp(com,"count")==0)
-			{
+			{	
 				char arr[1024][2][Maxkey];
 				int n=countN(bst);
 				addtoarray(bst,arr,0);
 				selectionsort(arr,n);
-				count(arr,n);				
+				printf("----------\n");
+				count(arr,n);			
+				printf("----------\n");	
 			}
 	}
 
