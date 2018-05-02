@@ -86,7 +86,7 @@ int addtoarray(struct tnode* root,char arr[1024][2][Maxkey],int i)
 {
 	if(root==NULL)return i;
 	char buffer[Maxkey];
-	itoa(root->cnt,buffer,10);
+	sprintf(buffer,"%d",root->cnt);
 	strcpy(arr[i][0],buffer);
 	strcpy(arr[i][1],root->key);
 	i++;
