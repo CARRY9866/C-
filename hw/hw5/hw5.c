@@ -13,7 +13,7 @@ int getword(char *x,int max)
 			i++;
 		}
 		else if(flag) break;
-	}
+	}	
 	x[i]='\0';
 	return i;
 }
