@@ -38,16 +38,15 @@
 // Hash implementatino for tcount
 
 #include<stdio.h>
+#include<string.h>
 #define maxHash 1048753
 
 struct dnode{
     char *key;
+    char *value;
     int cnt;
     struct dnode *next;
 };
-
-
-struct dnode *hashTab[maxHash];
 
 hashtab_init(struct dnode* hashTab , int maxHash)
 {
@@ -57,10 +56,71 @@ hashtab_init(struct dnode* hashTab , int maxHash)
     }
 }
 
-struct dnode* h_find(struct dnode* hashTab, cahr *key)
+unnsigned hashfun(char *key){}
+
+struct dnode* h_find(struct dnode* hashTab,int maxHash, char *key)
 {
-    
+    unsigned int hv;
+    struct dnode *lptr;
+    hv = hashfunc(key)%maxHash;
+    lptr = hashTab[hv];
+    while(lptr){
+        if(strcmp(lptr->key,key)==0)return lptr;
+        lptr=lptr->next;
+        return NULL;
+    }//return l_find(lptr,key);
 }
 
-h_insert(struct dnode* hashTab,char *key){}
+int h_insert(struct dnode* hashTab,int maxHash,char *key,char *keyBufptr,char *keyBufEnd)
+{
+    int len;
+    len=strlen(key);
+    struct tnode* lptr,p;
+
+    if( (len-1) > (keyBufEnd-keyBufptr) ) return KeyBufFull;
+    hv = hashfunc(key)%maxHash;
+    lptr=hashTab[hv];
+    p=(struct dnode*)malloc(sizeof(struct dnode));
+    if(p==NULL)return DnodeMallocFailed;
+    p->key=keyBufptr;
+    strcpy(keyBufptr,key); KeyBufptr+=len+1;
+    p->cnt=1;p->next=hashTab[hv];
+    return success;
+    // if(l_insert(lptr,key)==NULL)return DnodeMallocFailed;
+    // else return success;
+
+}
+
 h_delete(struct dnode* hashTab,struct node *p,char *key){}
+
+int main()
+{
+    struct dnode *hashTab[maxHash];
+    char *keyBuffer,*keyBufptr;
+    keyBuffer=(char*)malloc(maxkeyBuffer);
+    char *keyBufEnd;    //boundary  test
+
+    while(fgets(line,Maxline,stdin))
+    {
+        type=getkey(line,key);
+        if(type==add) add(htdb,key);
+        if(type==substract) subtract(htdb,key);
+    }
+
+    struct hdb_handler
+    {
+        struct dnode *hashTab[maxHash];
+        u_int maxHash;
+        char *keyBuffer;
+        char *keyBufptr;
+        char *keyBufEnd;
+    } htdb;
+
+    // +apple
+    // -apple
+    // .
+    // .
+    // .
+    // -jack
+    // +apple
+}
