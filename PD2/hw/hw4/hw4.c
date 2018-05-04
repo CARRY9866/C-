@@ -14,7 +14,7 @@ void printlist(struct tnode* L)
 	struct tnode *lptr = L ;
 	while(lptr)
 	{
-		printf("%d\t%s\n",lptr->cnt,lptr->key);
+		printf("%d %s\n",lptr->cnt,lptr->key);
 		lptr =lptr ->link;
 	}
 }
@@ -83,20 +83,27 @@ void sort1(struct tnode *L)	//bubblesort
 				swap(pt1,pt1->link);
 				swapped=1;
 			}
+			else if(pt1->cnt == pt1->link->cnt)
+			{
+				if(strcmp(pt1->key,pt1->link->key)>0)
+				{
+					swap(pt1,pt1->link);
+				}
+			}
 			pt1=pt1->link;
 		}
 		pt2=pt1;
 
 	}while(swapped);
 
-}
+}	
 
 // void sort2(struct tnode * L)	//sorting key value if same cnt
 // {
 // 	struct tnode *t=L;
 // 	while(t)
 // 	{
-
+		
 // 	}
 // }
 
@@ -109,7 +116,6 @@ int main(){
 		linklist = insert(linklist,key);
 	}
 	sort1(linklist);
-	// sort2(linklist);
 	printlist(linklist);
 
 return 0;}
