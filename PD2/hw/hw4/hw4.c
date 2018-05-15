@@ -14,7 +14,8 @@ void printlist(struct tnode* L)
 	struct tnode *lptr = L ;
 	while(lptr)
 	{
-		printf("%d %s\n",lptr->cnt,lptr->key);
+		printf("%d 
+		%s\n",lptr->cnt,lptr->key);
 		lptr =lptr ->link;
 	}
 }
