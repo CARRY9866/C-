@@ -1,7 +1,7 @@
 // Open addressing(Array only)
 // stored in array
 /*insertion*/
-    hv = hash(key%)%H;  // ..>hashsize
+    hv = hash(key)%H;  // ..>hashsize
     while(hash[hv]!=NULL){
         hv=(hv+1)%H;
     }hashTab[hv]=strdup(key);
