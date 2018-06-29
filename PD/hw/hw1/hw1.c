@@ -13,43 +13,43 @@ int main(){
 		}
 		else if(strcmp(key,"apple")==0)
 		{
-			printf("Ä«ªG\n");
+			printf("Ä«ï¿½G\n");
 		}
 		else if(strcmp(key,"banana")==0)
 		{
-			printf("­»¿¼\n");
+			printf("ï¿½ï¿½ï¿½ï¿½\n");
 		}
 		else if(strcmp(key,"orange")==0)
 		{
-			printf("¬h¤B\n");
+			printf("ï¿½hï¿½B\n");
 		}
 		else if(strcmp(key,"pineapple")==0)
 		{
-			printf("»ñ±ù\n");
+			printf("ï¿½ï¿½ï¿½\n");
 		}
 		else if(strcmp(key,"watermelon")==0)
 		{
-			printf("¦è¥Ê\n");
+			printf("ï¿½ï¿½ï¿½\n");
 		}
 		else if(strcmp(key,"grape")==0)
 		{
-			printf("¸²µå\n");
+			printf("ï¿½ï¿½ï¿½ï¿½\n");
 		}
 		else if(strcmp(key,"longan")==0)
 		{
-			printf("Às²´\n");
+			printf("ï¿½sï¿½ï¿½\n");
 		}
 		else if(strcmp(key,"ballet")==0)
 		{
-			printf("ªÝ¼Ö\n");
+			printf("ï¿½Ý¼ï¿½\n");
 		}
 		else if(strcmp(key,"chair")==0)
 		{
-			printf("´È¤l\n");
+			printf("ï¿½È¤l\n");
 		}
 		else if(strcmp(key,"door")==0)
 		{
-			printf("ªù\n");
+			printf("ï¿½ï¿½\n");
 		}
 		else if(strcmp(key,"0")==0)
 		{
@@ -57,7 +57,7 @@ int main(){
 		}
 		else 
 		{
-			printf("§õ¤½½¼·´!?\n");
+			printf("	?\n");
 		}
 
 
